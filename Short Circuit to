@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCan" height="400px" width="400px" style="border:1px black solid;"></canvas>
+
+<p id="pX"></p>
+<p id="pY"></p>
+
+<button onClick="changeCircleColor();">Change Circle Color</button>
+
+
+<script>
+//draw with mouse
+var _myCan = document.getElementById("myCan");
+_myCan.addEventListener("click", mouseClick);
+var mouseY = 0;
+var mouseX = 0;
+var green = false;
+function changeCircleColor(event) {
+    green = !green;
+}
+function mouseClick(event) {
+    this.addEventListener("mousemove", newDraw);
+    mouseX = event.x;
+    mouseY = event.y;
+    //var ctx = this.getContext("2d");
+    //ctx.lineTo(mouseX, mouseY);
+    //ctx.stroke();
+}
+function newDraw(event) {
+    var ctx = this.getContext("2d");
+    
+    /***Draw Circle***/
+    ctx.beginPath();
+    ctx.arc(mouseX, mouseY, 5, 0, 2*Math.PI);
+    if(green) {
+        ctx.strokeStyle = "#00ff00";
+        ctx.stroke();
+        ctx.fillStyle = "#00ff00";
+            ctx.fill();
+    }
+    else {
+        ctx.strokeStyle = "#000000";
+        ctx.stroke();
+        ctx.fillStyle = "#000000";
+            ctx.fill();
+    }
+    
+    
+    this.removeEventListener("mousemove", newDraw);
+} 
+</script>
+
+</body>
+</html>
