@@ -1,56 +1,807 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<canvas id="myCan" height="400px" width="400px" style="border:1px black solid;"></canvas>
+<head>
+<style type="text/css">
+	#myCan { background-color: DarkGreen; border: #000 1px solid; }
+	body 	{background-color: DarkSlateGray;}
+	h1 		{color:Gold ; text-align:center ;  font-family:courier ; font-size:300%}
+	</style>
 
-<p id="pX"></p>
-<p id="pY"></p>
+<h1><b>ShortCircuitTo</b></h1>
 
-<button onClick="changeCircleColor();">Change Circle Color</button>
+<script type="application/javascript" language ="javascript">
+window.onload = function ()  {
+ 
+	var canvas = document.getElementById('myCan'),
+	ctx = canvas.getContext('2d');
+	
+	//Future buttons and Menu boxes
+	
 
+	
+	//Starting at the top left adding pegs and open circuits
+	ctx.beginPath();
+	ctx.arc (25, 100, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
 
-<script>
-//draw with mouse
-var _myCan = document.getElementById("myCan");
-_myCan.addEventListener("click", mouseClick);
-var mouseY = 0;
-var mouseX = 0;
-var green = false;
-function changeCircleColor(event) {
-    green = !green;
-}
-function mouseClick(event) {
-    this.addEventListener("mousemove", newDraw);
-    mouseX = event.x;
-    mouseY = event.y;
-    //var ctx = this.getContext("2d");
-    //ctx.lineTo(mouseX, mouseY);
-    //ctx.stroke();
-}
-function newDraw(event) {
-    var ctx = this.getContext("2d");
-    
-    /***Draw Circle***/
-    ctx.beginPath();
-    ctx.arc(mouseX, mouseY, 5, 0, 2*Math.PI);
-    if(green) {
-        ctx.strokeStyle = "#00ff00";
-        ctx.stroke();
-        ctx.fillStyle = "#00ff00";
-            ctx.fill();
-    }
-    else {
-        ctx.strokeStyle = "#000000";
-        ctx.stroke();
-        ctx.fillStyle = "#000000";
-            ctx.fill();
-    }
-    
-    
-    this.removeEventListener("mousemove", newDraw);
-} 
+	ctx.beginPath();
+	ctx.arc (45, 120, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc (35, 145, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc (55, 175, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc (45, 205, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+	
+	//Last gold spot
+	ctx.beginPath();
+	ctx.arc (85, 250, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+	
+	
+	//Left Dark spot
+	ctx.beginPath();
+	ctx.arc (185, 250, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (285, 200, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//----------------------------------------------------------------------
+	ctx.beginPath();
+	ctx.arc (215, 320, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (260, 40, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (60, 420, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (275, 400, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (530, 160, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (415, 20, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (505, 490, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (205, 580, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (140, 575, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (700, 195, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (735, 480, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (710, 70, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (670, 550, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (795, 140, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (845, 215, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (820, 500, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//--------------------------------------------------------------
+	
+	ctx.beginPath();
+	ctx.arc (880, 200, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (895, 405, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (915, 265, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (925, 85, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (940, 570, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (955, 330, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (980, 420, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1005, 35, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1035, 150, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1090, 490, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1175, 515, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//------------------------------------------------------
+	
+	ctx.beginPath();
+	ctx.arc (1140, 295, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1210, 180, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (1280, 60, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//-----------------------------------------
+	
+	ctx.beginPath();
+	ctx.arc (150, 150, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (135, 510, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	ctx.beginPath();
+	ctx.arc (335, 500, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	
+	
+	
+	
+	
+	
+	//--------------------------------------------------------------------
+	// Future menu buttons and objects
+	
+	//Top menu item
+	ctx.beginPath();
+	ctx.lineWidth="3";
+	ctx.strokeStyle="White";
+	ctx.fillStyle="Black";
+	ctx.rect(525,250,300,30); 
+	ctx.fill();
+	ctx.stroke();
+	
+	//Top fake text
+	ctx.font="25px Georgia";
+	ctx.fillStyle="Blue";
+	ctx.fillText("Technician Name",577, 275);
+	
+	//Top circuit connector
+	ctx.beginPath();
+	ctx.arc (495, 265, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//Top connecting line
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(500, 265);
+	ctx.lineTo(525, 265);
+	ctx.stroke();
+	
+	
+	
+	
+	//Middle menu item
+	ctx.beginPath();
+	ctx.lineWidth="3";
+	ctx.strokeStyle="White";
+	ctx.fillStyle="Black";
+	ctx.rect(525,300,300,30); 
+	ctx.fill();
+	ctx.stroke();
+	
+	//Middle  text
+	ctx.font="25px Georgia";
+	ctx.fillStyle="Blue";
+	ctx.fillText("Level Select",612, 325);
+	
+	//Middle circuit connector
+	ctx.beginPath();
+	ctx.arc (850, 315, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "DarkGoldenRod";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "Yellow";
+	ctx.stroke();
+	ctx.fill();
+	
+	//Middle connecting line
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(825, 315);
+	ctx.lineTo(845, 315);
+	ctx.stroke();
+	
+	
+	//Bottom Menu item
+	ctx.beginPath();
+	ctx.lineWidth="3";
+	ctx.strokeStyle="White";
+	ctx.fillStyle="Black";
+	ctx.rect(525,350,300,30); 
+	ctx.fill();
+	ctx.stroke();
+	
+	//Middle  text
+	ctx.font="25px Georgia";
+	ctx.fillStyle="Blue";
+	ctx.fillText("Settings",630, 373);
+	
+	
+	//Bottom circuit connector
+	ctx.beginPath();
+	ctx.arc (450, 365, 5, 0,  2*Math.PI, true);
+	ctx.fillStyle = "Black";
+	ctx.lineWidth = "2";
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.stroke();
+	ctx.fill();
+	
+	//Bottom connecting line
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(455, 365);
+	ctx.lineTo(525, 365);
+	ctx.stroke();
+
+	//Starting Lines to fill up the board
+	
+	//level select line
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(850, 315);
+	ctx.lineTo(950, 405);
+	ctx.lineTo(1080, 405);
+	ctx.lineTo(1210, 490);
+	ctx.lineTo(1300, 490);
+	ctx.stroke();
+	
+	//Settings circuit connections
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(450, 370);
+	ctx.lineTo(450, 400);
+	ctx.lineTo(820, 400);
+	ctx.lineTo(820, 494);
+	ctx.stroke();
+	
+	
+	
+	
+	
+	//----------------------------------------
+	
+	//Golden orb lines
+	//top Golden line
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(25, 100);
+	ctx.lineTo(160, 100);
+	ctx.lineTo(220, 165);
+	ctx.lineTo(530, 190);
+	ctx.lineTo(640, 140);
+	ctx.lineTo(700, 0);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(45, 120);
+	ctx.lineTo(15, 120);
+	ctx.lineTo(15, 600);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(35, 145);
+	ctx.lineTo(135, 145);
+	ctx.lineTo(160, 120);
+	ctx.lineTo(220, 178);
+	ctx.lineTo(530, 203);
+	ctx.lineTo(900, 155);
+	ctx.lineTo(1100, 0);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(55, 175);
+	ctx.lineTo(22, 175);
+	ctx.lineTo(22, 600);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(45, 205);
+	ctx.lineTo(220, 205);
+	ctx.lineTo(400, 400);
+	ctx.lineTo(400, 600);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "Gold";
+	ctx.lineWidth = "2";
+	ctx.moveTo(85, 250);
+	ctx.lineTo(28, 250);
+	ctx.lineTo(28, 600);
+	ctx.stroke();
+	
+	//-----------------------------------------Black connection lines
+	//Tech name connection
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(490, 265);
+	ctx.lineTo(290, 265);
+	ctx.lineTo(222, 190);
+	ctx.lineTo(190, 190);
+	ctx.lineTo(154, 154);
+	ctx.stroke();
+	
+	//Top left connections-----
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(526, 160);
+	ctx.lineTo(220, 150);
+	ctx.lineTo(150, 70);
+	ctx.lineTo(0, 70);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(410, 20);
+	ctx.lineTo(240, 20);
+	ctx.lineTo(160, 60);
+	ctx.lineTo(225, 135);
+	ctx.lineTo(530, 145);
+	ctx.lineTo(530, 155);
+	ctx.stroke();
+	
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(262, 44);
+	ctx.lineTo(290, 120);
+	ctx.lineTo(620, 130);
+	ctx.lineTo(680, 0);
+	ctx.stroke();
+	
+	//-----------------Top middle connections
+	//L shape line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(795, 135);
+	ctx.lineTo(795, 34);
+	ctx.lineTo(1000, 34);
+	ctx.stroke();
+	
+	//Outside line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(713, 74);
+	ctx.lineTo(775, 110);
+	ctx.lineTo(775, 155);
+	ctx.lineTo(860, 145);
+	ctx.lineTo(921, 89);
+	ctx.stroke();
+	
+	//-----------------------------Left section connections
+	//---Outside line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(60, 414);
+	ctx.lineTo(60, 280);
+	ctx.lineTo(110, 280);
+	ctx.lineTo(110, 220);
+	ctx.lineTo(210, 220);
+	ctx.lineTo(385, 410);
+	ctx.lineTo(370, 500);
+	ctx.lineTo(340, 500);
+	ctx.stroke();
+	
+	//--- Z line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(139, 507);
+	ctx.lineTo(200, 460);
+	ctx.lineTo(105, 325);
+	ctx.lineTo(182, 253);
+	ctx.stroke();
+	
+	//--- Short line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(144, 571);
+	ctx.lineTo(250, 480);
+	ctx.lineTo(273, 404);
+	ctx.stroke();
+	
+	//bottom connections
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(208, 577);
+	ctx.lineTo(355, 425);
+	ctx.lineTo(238, 300);
+	ctx.lineTo(218, 317);
+	ctx.stroke();
+	
+	//----Connecting the middle two circuits
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(217, 324);
+	ctx.lineTo(273, 396);
+	ctx.stroke();
+	
+	//-----Bottom section circuits
+	//left line with the U shape
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(508, 486);
+	ctx.lineTo(550, 450);
+	ctx.lineTo(785, 450);
+	ctx.lineTo(785, 525);
+	ctx.lineTo(850, 525);
+	ctx.lineTo(850, 450);
+	ctx.lineTo(890, 406);
+	ctx.stroke();
+	//Right middle line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(675, 550);
+	ctx.lineTo(1176,550);
+	ctx.lineTo(1176, 520);
+	ctx.stroke();
+	//bottom line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(735, 485);
+	ctx.lineTo(735, 538);
+	ctx.lineTo(1090, 538);
+	ctx.lineTo(1090, 496);
+	ctx.stroke();
+	//Right outside line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(985, 420);
+	ctx.lineTo(1080, 420);
+	ctx.lineTo(1230, 520);
+	ctx.lineTo(1230, 575);
+	ctx.lineTo(945, 570);
+	ctx.stroke();
+	//bottom to the edge
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(940, 575);
+	ctx.lineTo(940, 600);
+	ctx.stroke();
+	
+	//-----Right middle connections
+	//the one across the menu
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(289, 204);
+	ctx.lineTo(350, 235);
+	ctx.lineTo(880, 235);
+	ctx.lineTo(913, 260);
+	ctx.stroke();
+	
+	//top boarder line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(705, 194);
+	ctx.lineTo(900, 175);
+	ctx.lineTo(1000, 100);
+	ctx.lineTo(1210, 100);
+	ctx.lineTo(1210, 175);
+	ctx.stroke();
+	
+	//Right Outside boarder line
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(1277, 63);
+	ctx.lineTo(1240, 95);
+	ctx.lineTo(1240, 200);
+	ctx.lineTo(1165, 200);
+	ctx.lineTo(1165, 325);
+	ctx.lineTo(1105, 325);
+	ctx.lineTo(1105, 200);
+	ctx.lineTo(1039, 153);
+	ctx.stroke();
+	
+	//-- connected to the boarder
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(1280, 55);
+	ctx.lineTo(1280, 0);
+	ctx.stroke();
+	
+	
+	//---Bottom  circuit
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(850, 215);
+	ctx.lineTo(880, 215);
+	ctx.lineTo(955, 275);
+	ctx.lineTo(955, 325);
+	ctx.stroke();
+	//Connected circuit to the boarder
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(955, 335);
+	ctx.lineTo(955, 390);
+	ctx.lineTo(1080, 390);
+	ctx.lineTo(1210, 473);
+	ctx.lineTo(1300, 473);
+	ctx.stroke();
+	
+	
+	//Middle circuit down into the U
+	ctx.beginPath();
+	ctx.strokeStyle = "DarkGoldenRod";
+	ctx.lineWidth = "3";
+	ctx.moveTo(885, 200);
+	ctx.lineTo(905, 200);
+	ctx.lineTo(1005, 120);
+	ctx.lineTo(1140, 120);
+	ctx.lineTo(1140, 290);
+	ctx.stroke();
+	
+	
+	
+	
+	
+} ;
 </script>
+</head>
+<body >
+<canvas id="myCan" height="600" width="1300" ></canvas>
 
 </body>
 </html>
